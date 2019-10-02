@@ -1,32 +1,110 @@
+/*Lesson 7 responsive changes*/
+@media screen and (max-width: 600px) {
+.display {
+    text-align: center;
+    overflow: hidden; 
+ }
+ .display li { 
+    padding: 20px; 
+    display: inline-block;
+    width: 5%;
+ }
+}
+
+@media screen and (max-width: 400px) {
+    .display {
+        text-align: center;
+        overflow: hidden; 
+     }
+     .display li { 
+        padding: 20px; 
+        display: inline-block;
+        width: 5%;
+     }
+    }
+    
 body {
-    background-color: lightblue; 
+    background-image: linear-gradient(gray, lightgreen);
+    border-left: 6px solid green;
+    height: 625px; 
 }
 
 header { 
-    font-family:  Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center; 
-    font-size: 20px; 
-    background-color: gray;
+    font-family:  Meridena, Tahoma;
+    text-align: left;
+    font-size: 17px; 
     padding-bottom: 20px;
+    padding-top: 5px;
+    padding-left: 30px
 }
 
-img {
-    width: 300px;
 }
 
 main {
     padding-top: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Merienda, Tahoma; 
     text-align: left;
     margin-left: 20px; 
     font-size: 13px;
+    color: rgb(36, 36, 36);
 }
 
 footer {
     text-align: center; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Merienda, Tahoma; 
     font-size: 11px; 
     border-style: ridge;
     border-block-color: white;
     background-color: gray; 
+    text-shadow: 2px 2px 4px #000000;
 }
+
+footer a { 
+    font-style: initial;
+    text-decoration: none; 
+    color: black; 
+}
+
+body header { 
+    text-shadow: 2px 2px 4px;
+    color: white; 
+}
+nav { 
+    width: 1000px;
+}
+}
+ul {                                   /*This section styles the unordered list which will become the menu*/ 
+ text-align: left;                    /*align text within menu to the left*/
+ list-style: none;                  /*get rid of the styling (i.e. bullets) in the list*/ 
+ 
+}
+ul li {                                 /*This section styles the list items (i.e. menu items) */ 
+ font: Tahoma                       ; /*change the font size and type*/
+ display: inline-block;            /*display list items in one line (makes list horizontal)*/             
+ padding: 15px 15px;           /*Add padding around the text*/
+ background: #fff;              /*Change background color of the menu items*/
+ cursor: pointer;                  /*Change the mouse cursor to a pointer even if the text is not a link (useful for dropdown menus)*/
+ }
+ ul li:hover {                        /*This section styles the menu items when hovered (rolled) over*/ 
+ background: #555;             /*Change the background color of list item when hovered over*/
+ color: #fff;                        /*Change the color of the text when hovered over*/
+ }
+ ul li ul {                            /*This section styles the unordered list which will become the submenu*/ 
+ padding: 5;                       /*Get rid of any default padding*/
+ position: absolute;             /*Works in conjunction with the earlier relative positioning code. Distinguishes submenu items from menu items and forces submenus to open in the same position for each menu item (i.e. an absolute position immediately below the menu item)*/
+ top: 48px;    
+ left: -1000px;                    /*Add a little space between the menu and submenu*/
+ width: 150px;                  /*Set the width for the submenu*/
+ }
+ ul li ul li {                        /*This section styles nested list items (i.e. submenu items) */ 
+ background: #555;           /*Set background color for submenu items*/
+ color: #fff;                     /*Set submenu text color*/
+ }
+ ul li ul li:hover { background: #666; } /*Change submenu item's background color when hovered over*/
+ ul li:hover ul {                 /*This section styles the submenu when a menu item it hovered over*/ 
+ left :0px;                        /*Moves submenu from way offscreen to its proper location on screen when the menu item is hovered over*/
+ }
+ img {
+    width: 50%; 
+    height: auto; 
+ }
